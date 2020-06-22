@@ -11,6 +11,7 @@ Um site que consome a api rest-countries para pegar informações de países e m
  - Listas todos os países
  - Filtrar os países por região
  - Mudar o tema de Dark para Light
+ - Ver detalhes de um país
  
 ## Tecnologias
 
