@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+
+import Routes from './routes';
+import GlobalStyle from "./styles/global"
+import { ThemeProvider } from "styled-components"
+
+import dark from "./styles/themes/dark"
+import light from "./styles/themes/light"
 
 function App() {
+  const [theme, setTheme] = useState(dark)
+  
+  function toggleTheme(){
+    setTheme(theme.title === "light" ? dark : light)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <ThemeProvider theme={theme}>
+        <Routes toggleTheme={toggleTheme}/>
+        <GlobalStyle />
+      </ThemeProvider>
   );
 }
 
