@@ -25,6 +25,10 @@ export const Main = styled.main`
     display: flex;
     margin-top: 80px;
 
+    img{
+        width: 23vw;
+        height: 100%;
+    }
     div{
         margin-left: 160px;
         margin-top: 50px;

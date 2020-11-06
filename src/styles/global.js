@@ -13,14 +13,15 @@ export default createGlobalStyle`
         background: ${props => props.theme.colors.primary};
         width: 1440px;
         margin: 0 auto;
-        cursor: pointer;
         font-family: 'Nunito Sans', sans-serif;
-
     }
 
     body, input, button, select{
         color: ${props => props.theme.colors.text};
-
+    }
+    
+    button, select{
+        cursor: pointer;
     }
 
     button{
